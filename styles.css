@@ -1,0 +1,91 @@
+@import 'https://unpkg.com/@a1rth/css-normalize@1.1.3/index.css';
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    max-width: 1300px;
+    height: 100vh;
+    margin-inline: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+aside {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f0f0f0; 
+    padding: 10px; 
+    width: 200px;
+    height: 100vh; 
+    overflow-y: auto;
+}
+
+.visualy-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+.color-box{
+    width: clamp(200px, 50%, 400px);
+    aspect-ratio: 1;
+    background-color: rebeccapurple;
+    box-shadow: 6px 6px 9px #777;
+}
+
+.generate-color-button{
+    width: 200px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.copy-text-non-visible{
+    visibility: hidden;
+}
+
+.last-colors-item{
+    height: 100px;
+}
+
+.last-colors-item:hover{
+    transition: transform 0.3s;
+    transform: scale(1.05);
+}
+
+.hex-header:hover, .generate-color-button, .last-colors-item{
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    aside {
+        width:100px;
+    }
+}
+
+@media (max-width: 550px) {
+    aside {
+        width: 50px;
+    }
+    
+    .last-colors-item{
+        height: 50px;
+    }
+}
