@@ -17,12 +17,11 @@ class ColorSwitcher{
         const hexFromUrl = window.location.hash.replace('#', '')
         if (this.isValidHex(hexFromUrl)) {
             this.RGB = this.hexToRgb(hexFromUrl)
-            this.addColorToAside()
             this.updateColorAndHex()
         } else {
             this.updateColorAndHex()
         }
-
+        this.addColorToAside()
         this.bindEvents() 
     }
     
@@ -67,6 +66,9 @@ class ColorSwitcher{
         li.classList.add('last-colors-item');
         li.style.backgroundColor = this.getRgb();
         this.lastColorsListElement.prepend(li);
+        if(this.lastColorsListElement.childElementCount > 100){
+            this.lastColorsListElement.lastElementChild.remove()
+        }
     }
 
     rgbToHex(rgbString) {
