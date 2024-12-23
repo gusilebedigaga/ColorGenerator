@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Генератор случайных цветов</title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+    </head>
+    <body>
+        <h1 class="visualy-hidden">Генератор случайного цвета</h1>
+          <main>
+              <div class="color-box" data-js-color-box></div>
+              <div class="hex-box" data-js-hex-box>
+                  <h2 class="hex-header" data-js-hex-header></h2>
+                  <p class="copy-text-non-visible" data-js-copy-text>Скопировано!</p>
+              </div>
+              <button class="generate-color-button" type="button" data-js-color-switcher>Сгенерировать цвет</button>
+              <aside>
+                <ul class="last-colors-list" data-js-last-colors-list>
+                </ul>
+              </aside>
+            </main>
+        <script src="script.js"></script>
+    </body>
+</html>
