@@ -65,13 +65,15 @@ aside {
     height: 100px;
 }
 
-.last-colors-item:hover{
-    transition: transform 0.3s;
-    transform: scale(1.05);
-}
-
 .hex-header:hover, .generate-color-button, .last-colors-item{
     cursor: pointer;
+}
+
+@media (hover: hover){
+    .last-colors-item:hover{
+        transition: transform 0.3s;
+        transform: scale(1.05);
+    }
 }
 
 @media (max-width: 900px) {
