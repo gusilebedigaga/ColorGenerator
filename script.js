@@ -43,7 +43,7 @@ class ColorSwitcher{
     
     updateUrl() {
         const hexCode = this.rgbToHex(this.getRgb());
-        window.history.replaceState({}, '', `${window.location.pathname}#${hexCode}`)
+        window.history.replaceState({}, '', `${window.location.pathname}${hexCode}`)
     }
 
     replaceState() {
